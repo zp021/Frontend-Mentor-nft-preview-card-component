@@ -63,7 +63,7 @@ Going forward, I would like to explore CSS more, focus on best practices, access
 
 ### Useful resources
 
-- [Resource 1](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) - This helped me with the overlay layer.
+- [Adjacent sibling combinator](https://developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator) - This helped me with the overlay layer.
 
 
 ## Author
