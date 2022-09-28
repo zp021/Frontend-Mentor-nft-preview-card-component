@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+/* primary colors */
+
+--softblue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+
+/* neutral colors */
+
+--verydarkblue: hsl(217, 54%, 11%); /* main BG */
+--verydarkblue-card: hsl(216, 50%, 16%); /* card BG */
+--verydarkblue-line: hsl(215, 32%, 27%); /*  line */
+--white: hsl(0, 0%, 100%);
+
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    background-color: var(--verydarkblue);
+    color: var(--softblue);
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container {
+    background-color: var(--verydarkblue-card);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    width: min(88%, 22rem);
+    margin: 9rem auto;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.container .image {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+}
+
+.container .image .image-main {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.container .image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    background-color: var(--cyan);
+    border-radius: 0.5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.container .image:hover .overlay {
+    opacity: 0.6;
+}
+
+.container .image:hover .overlay + .view-icon {
+    display: block;
+}
+
+.container .image .view-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.container h2 {
+    color: var(--white);
+    font-size: 1.375rem;
+    margin-top: 1.375rem;
+    transition: 0.3s ease-in-out
+}
+
+.container h2:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.container .description {
+    font-size: 1.125rem;
+    font-weight: 300;
+    margin-top: 1.125rem;
+    line-height: 1.5;
+}
+.container .time-left, .crypto, .author {
+    font-size: 1rem;
+}
+
+.container .sale {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.125rem;
+    margin-bottom: 1.5rem;
+}
+
+.container .crypto {
+    display: flex;
+    align-items: center;
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.container .time-left {
+    display: flex;
+    align-items: center;
+}
+
+.container .crypto img, .time-left img {
+    margin-right: 0.313rem;
+}
+
+.container .author {
+    border-top: 1px solid var(--verydarkblue-line);
+    font-weight: 300;
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.container .author img {
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+.container .author a {
+    color: var(--white);
+    transition: 0.3s ease-in-out;
+}
+
+.container .author a:hover {
+    color: var(--cyan);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (max-width: 400px) {
+    .container .description {
+        margin-top: 0.75rem;
+        font-size: 1rem;
+    }
+
+    .container .sale {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .container .author {
+        margin-bottom: 0;
+    }
+}
