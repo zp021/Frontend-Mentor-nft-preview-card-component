@@ -26,6 +26,11 @@ body {
     font-size: 18px;
     background-color: var(--verydarkblue);
     color: var(--softblue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 img {
@@ -41,8 +46,7 @@ a {
     background-color: var(--verydarkblue-card);
     padding: 1.5rem;
     border-radius: 1rem;
-    width: min(88%, 22rem);
-    margin: 9rem auto;
+    max-width: 22rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
 }
 
@@ -161,6 +165,7 @@ a {
 .attribution { 
     font-size: 11px; 
     text-align: center; 
+    margin-top: 2rem;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
