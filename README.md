@@ -55,6 +55,7 @@ I looked online for solutions on how to add the overlay layer to image on hover,
 .container .image:hover .overlay + .view-icon {
     display: block;
 }
+```
 
 ### Continued development
 
